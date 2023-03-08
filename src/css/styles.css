@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0 20px;
+}
+
+aside,
+main {
+  max-width: 600px;
+  width: 50%;
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+main .score-toolbar {
+  display: flex;
+  align-items: center;
+}
+
+main .score-toolbar button {
+  width: 90px;
+  height: 35px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: #ebeaea;
+  border: 1px solid #000;
+}
+main .scores-wrapper {
+  border: 2px solid #000;
+  height: 400px;
+  overflow: hidden;
+}
+
+main .scores-wrapper article{
+  padding: 6px 12px;
+  font-weight: bold;
+}
+
+main .scores-wrapper article:nth-child(even){
+  background-color: #ebeaea;
+}
+
+aside {
+  max-width: 300px;
+  margin-left: 20px;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+aside input,
+aside button {
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 15px;
+  border: 1px solid #000;
+  margin-bottom: 12px;
+}
+
+aside button {
+  align-self: flex-end;
+  background-color: #ebeaea;
+  width: 90px;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
