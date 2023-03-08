@@ -1,5 +1,3 @@
-export const addHeader = () => '<header><h1>Leaderboard</h1></header>';
-
 export const addForm = () => `
     <aside>
         <h2>Add your score</h2>
