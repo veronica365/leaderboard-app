@@ -1,7 +1,5 @@
 import scores from './scores.js';
-import {
-  addHeader, addMainSection, addForm, addScore,
-} from './components.js';
+import { addMainSection, addForm, addScore } from './components.js';
 /**
  * Create and insert default scores and an add score form
  * @returns document Element
@@ -18,12 +16,13 @@ const createScoresList = () => {
  * Create and insert default scores and an add score form
  * @returns document Element
  */
-const appendHTML = () => `<div class="wrapper">${addHeader()}${addMainSection()}${addForm()}</div>`;
+const appendHTML = () => `${addMainSection()}${addForm()}`;
 /**
  * Display initial scores list and add form event listeners
  */
 const initialize = () => {
-  document.body.innerHTML = appendHTML();
+  const currentHTML = document.querySelector('.wrapper').innerHTML;
+  document.querySelector('.wrapper').innerHTML = `${currentHTML}${appendHTML()}`;
   document.querySelector('.scores-wrapper').innerHTML = createScoresList();
 };
 export default initialize;
