@@ -1,4 +1,4 @@
-export const addHeader = () => `<header><h1>Leaderboard</h1></header>`;
+export const addHeader = () => '<header><h1>Leaderboard</h1></header>';
 
 export const addForm = () => `
     <aside>
@@ -21,6 +21,6 @@ export const addMainSection = () => `
     </main>
 `;
 
-export const addScore=(score)=>`
+export const addScore = (score) => `
     <article>Name: ${score}</article>
 `;

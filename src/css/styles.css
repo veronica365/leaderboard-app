@@ -25,39 +25,6 @@ main .score-toolbar {
   align-items: center;
 }
 
-main .score-toolbar button {
-  width: 90px;
-  height: 35px;
-  margin-left: 20px;
-  border-radius: 5px;
-  background-color: #ebeaea;
-  border: 1px solid #000;
-}
-main .scores-wrapper {
-  border: 2px solid #000;
-  height: 400px;
-  overflow: hidden;
-}
-
-main .scores-wrapper article{
-  padding: 6px 12px;
-  font-weight: bold;
-}
-
-main .scores-wrapper article:nth-child(even){
-  background-color: #ebeaea;
-}
-
-aside {
-  max-width: 300px;
-  margin-left: 20px;
-}
-
-aside form {
-  display: flex;
-  flex-direction: column;
-}
-
 aside input,
 aside button {
   height: 35px;
@@ -71,6 +38,40 @@ aside button {
   align-self: flex-end;
   background-color: #ebeaea;
   width: 90px;
+}
+
+main .score-toolbar button {
+  width: 90px;
+  height: 35px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: #ebeaea;
+  border: 1px solid #000;
+}
+
+main .scores-wrapper {
+  border: 2px solid #000;
+  height: 400px;
+  overflow: hidden;
+}
+
+main .scores-wrapper article {
+  padding: 6px 12px;
+  font-weight: bold;
+}
+
+main .scores-wrapper article:nth-child(even) {
+  background-color: #ebeaea;
+}
+
+aside {
+  max-width: 300px;
+  margin-left: 20px;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
