@@ -3,7 +3,7 @@ import API_URL from './config.js';
 class Scores {
   static scores = [];
 
-  static name = ''
+  static name = '0huaPcYLjFNcsg2gZkL3';
 
   static requestOptions = {
     method: 'POST',
@@ -17,11 +17,13 @@ class Scores {
   };
 
   static createGameName = async (title = 'veronica365-1') => {
+    if (this.name) return this.name;
     this.requestOptions.body = JSON.stringify({ name: title });
     const response = await fetch(`${API_URL}games/`, this.requestOptions);
     const { result } = await response.json();
     const name = String(result).split(' ')[3];
     this.name = name;
+    return name;
   };
 
   static getAllScores = async () => {
