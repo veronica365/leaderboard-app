@@ -1,11 +1,14 @@
 import scores from './scores.js';
-import { addMainSection, addForm, addScore } from './components.js';
+import {
+  addMainSection, addForm, addScore, noScorePlaceholder,
+} from './components.js';
 /**
  * Create and insert default scores and an add score form
  * @returns document Element
  */
 const createScoresList = () => {
   let innerHTML = '';
+  if (!scores.scores.length) return noScorePlaceholder();
   scores.scores.forEach((score) => {
     innerHTML += addScore(score);
   });
@@ -16,8 +19,9 @@ const createScoresList = () => {
  * Get all scores for a game created by you from the API
  */
 const onRefresh = async () => {
-  await scores.getAllScores();
   const currentScores = document.querySelector('.scores-wrapper');
+  currentScores.innerHTML = noScorePlaceholder('Loading recent scores');
+  await scores.getAllScores();
   currentScores.innerHTML = createScoresList();
 };
 

@@ -8,13 +8,19 @@ export const addForm = () => `
         </form>
     </aside>`;
 
+export const noScorePlaceholder = (
+  innerHTML = 'Scores you add shall appear here',
+) => `
+    <div class="no-score">${innerHTML}</div>
+`;
+
 export const addMainSection = () => `
     <main>
         <section>
             <div class="score-toolbar">
                 <h2>Recent scores</h2> <button>Refresh</button>
             </div>
-            <div class="scores-wrapper"></div>
+            <div class="scores-wrapper">${noScorePlaceholder()}</div>
         </section>
     </main>
 `;
