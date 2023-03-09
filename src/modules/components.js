@@ -2,8 +2,8 @@ export const addForm = () => `
     <aside>
         <h2>Add your score</h2>
         <form>
-            <input placeholder="Your name"/>
-            <input placeholder="Your score" />
+            <input name="name" type="text" required placeholder="Your name"/>
+            <input name="score" type="number" required placeholder="Your score" />
             <button type="submit">Submit</button>
         </form>
     </aside>`;
@@ -19,6 +19,6 @@ export const addMainSection = () => `
     </main>
 `;
 
-export const addScore = (score) => `
-    <article>Name: ${score}</article>
+export const addScore = ({ user, score }) => `
+    <article>${user}: ${score}</article>
 `;
